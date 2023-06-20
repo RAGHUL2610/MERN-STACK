@@ -21,6 +21,7 @@ INSERT INTO staff (id, name, gender, subject, age) VALUES
   (10, 'Prabha', 'Female', 'Mathematics', 37);
 -- Sort according to the age
 SELECT * FROM staff order by age asc;
+
 -- Count the staff in each subject
 SELECT count(subject),subject from staff group by subject;
 
@@ -37,3 +38,31 @@ SELECT MIN(age), MAX(age) FROM staff;
 
 -- Calculate the total age of all staff members:
 SELECT SUM(age) FROM staff;
+
+
+
+--output
+
+4|David|Male|History|29
+3|Michael|Male|Art|30
+10|Prabha|Female|Mathematics|37
+2|Ravi|Male|Science|40
+9|Haree|Male|Physical Education|41
+7|Raghul|Male|Geography|43
+1|Ram|Male|Mathematics|45
+6|Fathima|Female|Chemistry|46
+5|Ahmad|Male|Physics|49
+8|Krishna|Male|Art|49
+2|Art
+1|Chemistry
+1|Geography
+1|History
+2|Mathematics
+1|Physical Education
+1|Physics
+1|Science
+10
+40.9
+29|49
+409
+
