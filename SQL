@@ -1,0 +1,39 @@
+-- create a table
+CREATE TABLE staff (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  gender TEXT NOT NULL,
+  subject TEXT NOT NULL,
+  age INTEGER NOT NULL
+);
+
+-- insert some values
+INSERT INTO staff (id, name, gender, subject, age) VALUES
+  (1, 'Ram', 'Male', 'Mathematics', 45),
+  (2, 'Ravi', 'Male', 'Science', 40),
+  (3, 'Michael', 'Male', 'Art', 30),
+  (4, 'David', 'Male', 'History', 29),
+  (5, 'Ahmad', 'Male', 'Physics', 49),
+  (6, 'Fathima', 'Female', 'Chemistry', 46),
+  (7, 'Raghul', 'Male', 'Geography', 43),
+  (8, 'Krishna', 'Male', 'Art', 49),
+  (9, 'Haree', 'Male', 'Physical Education', 41),
+  (10, 'Prabha', 'Female', 'Mathematics', 37);
+-- Sort according to the age
+SELECT * FROM staff order by age asc;
+-- Count the staff in each subject
+SELECT count(subject),subject from staff group by subject;
+
+-- Aggregate Functions
+-- Count the number of records:
+SELECT COUNT(*) FROM staff;
+
+
+-- Calculate the average age of staff members:
+SELECT AVG(age) FROM staff;
+
+-- Find the minimum and maximum age among the staff:
+SELECT MIN(age), MAX(age) FROM staff;
+
+-- Calculate the total age of all staff members:
+SELECT SUM(age) FROM staff;
