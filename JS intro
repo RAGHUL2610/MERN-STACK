@@ -1,0 +1,410 @@
+console.log("WELCOME");
+
+JavaScript has 8 Datatypes
+>String.
+>Number.
+>Bigint.
+>Boolean.
+>Undefined.
+>Null.
+>Symbol.
+>Object.
+
+
+let c="5"/0
+console.log(c);
+o/p infinity
+
+
+let c="d"/0
+console.log(c);
+o/p nan
+
+
+Bigint
+let c=10n;
+console.log(c,typeof c);
+
+2^53
+
+Bactic operator 
+console.log(`add of two numbers ${num1} and ${num2} is ${num1+num2}`);
+o/p add of two numbers 199 and 200 is 399
+
+let str5;
+console.log(str5);
+o/p undefined
+
+
+let obj =null;
+console.log(obj);
+O.p null
+
+
+console.log(sece);
+const sece="college";
+
+o/p //hosting moves var to top so in var, undefined is displayed rather error
+let d=true;
+console.log(typeof d);
+o/p 	boolean
+
+
+
+
+let obj=
+{
+    sch:"sece",
+    name:"rag",
+    roll:"21",
+    age:"20",
+    dob:"26102003"
+
+
+}
+console.log(typeof obj);
+o/p object
+
+
+let obj=
+{
+    sch:"sece",
+    name:"rag",
+    roll:"21",
+    age:"20",
+    dob:"26102003"
+
+
+}
+user.dept="cse";
+console.log( obj);
+
+o/p{sch: 'sece', name: 'rag', roll: '21', age: '20', dob: '26102003', …}
+age: "20"
+dept: "cse"
+dob: "26102003"
+name: "rag"
+roll: "21"
+sch: "sece"
+let obj=
+{
+    sch:"sece",
+    name:"rag",
+    roll:"21",
+    age:"20",
+    dob:"26102003"
+
+
+}
+delete(obj.dob);
+console.log( obj);
+
+
+o/p{sch: 'sece', name: 'rag', roll: '21', age: '20'}
+age: "20"
+name: "rag"
+roll: "21"
+sch: "sece
+
+
+let obj=
+{
+    sch:"sece",
+    name:"rag",
+    roll:"21",
+    age:"20",
+    dob:"26102003"
+
+
+}
+Object.freeze(obj);
+
+
+delete(obj.dob);
+console.log( obj);
+o/p {sch: 'sece', name: 'rag', roll: '21', age: '20', dob: '26102003'}
+
+
+
+let obj=
+{
+    sch:"sece",
+    name:"rag",
+    roll:"21",
+    age:"20",
+    dob:"26102003"
+
+
+}
+console.log( Object.keys(obj));
+
+
+ 
+
+o/p
+['sch', 'name', 'roll', 'age', 'dob']
+
+
+let obj=
+{
+    sch:"sece",
+    name:"rag",
+    roll:"21",
+    age:"20",
+    dob:"26102003"
+
+
+}
+console.log( Object.values(obj));
+o/p  ['sece', 'rag', '21', '20', '26102003']
+
+
+
+//mutation
+
+
+const mut=
+{
+    name:"fdf",
+    age:"42",
+}
+const mut1= {...mut};
+mut1.age=40;
+ console.log(mut,mut1);
+
+o/p {name: 'fdf', age: '42'} {name: 'fdf', age: 40}
+
+
+const mut=
+{
+    name:"fdf",
+    age:"42",
+}
+const mut1= {...mut,cls:"cse"};
+mut1.age=40;
+ console.log(mut,mut1);
+
+o/p {name: 'fdf', age: 40, cls: 'cse'}
+age: 40
+cls: "cse"
+name: "fdf"
+
+const details =
+ {
+    address:
+    {
+        street : "str",
+        city :'cbe,'
+    }
+ }
+ console.log(details.address.city);
+ console.log(details.vaya);
+ 
+o/p
+cbe,
+undefined
+
+
+FUNCTIONS
+
+ function sum(n1,n2)
+ {
+    return n1+n2;
+ }
+ console.log(sum(10,40));
+
+
+ 
+o/p 50
+
+
+
+function sum(n1,n2)
+ {
+    if(typeof n1 !== 'number' || typeof n2 !== 'number')
+    {
+        return 'invalid number'
+    }
+    else
+    return n1+n2;
+ }
+ console.log(sum("D",40));
+
+
+
+o/p invalid number.
+
+
+//difference between == and ===.
+ if(45=="45")
+ console.log(true);
+ else
+ console.log(false);
+
+o/p true.
+
+ if(45==="45")
+ console.log(true);
+ else
+ console.log(false);
+
+
+
+o/p false
+
+
+const sums=(n1,n2)=>
+ {
+    return n1+n2;
+ }
+ console.log(sums(20,30));
+ //iifv
+ (function calci (s1,s2)
+ {
+    console.log(sums(s1,s2));
+ }
+ )(4,5)
+
+o/p
+50
+9
+
+
+
+const sums=(n1,n2)=>
+ {
+    return n1+n2;
+ }
+ console.log(sums(20,30));
+ //iifv
+ (function calci (s1,s2)
+ {
+    console.log(sums(s1,s2));
+ }
+ )(4,5)
+
+
+
+
+ function print(operation ,a,b)
+ {
+    console.log(operation(a,b));
+ }
+ print(sum,5,7)
+
+Here print is higher order function 
+And sum is call back function
+
+
+console.log(rag.replace('i','o'));
+
+
+o/p
+
+A is b
+A os b
+
+
+let arr=[1,2,3,123];
+console.log(arr); [1, 2, 3, 123]
+arr.push(10);
+console.log(arr);1, 2, 3, 123, 10]
+arr.pop();
+console.log(arr);[1, 2, 3, 123]
+arr.shift(1);
+console.log(arr);[2, 3, 123]
+arr.unshift(1);
+console.log(arr);[1, 2, 3, 123]
+
+
+
+Join two arrays 
+
+let arr3=[1,2,3,4,5];
+let arr4=[6,7,8,9,10];
+
+
+let arr5=arr3.concat(arr4);
+let arr6=[...arr3,...arr4];
+console.log(arr5);[
+console.log(arr6);
+
+
+
+o/p
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+arr3.push(6,7,8,9,10);
+console.log(arr3);
+
+o/p
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+
+let names=["tharun","as","kani","sanjay"]
+
+
+console.log(names.slice(1,3));
+
+o/p
+['as', 'kani']
+let names=["tharun","as","kani","sanjay"]
+
+
+console.log(names.splice(1,3));
+console.log(names);
+
+
+Splice is destructive method .|| slice is non destructive
+
+let names=["tharun","as","kani","sanjay"]
+
+
+console.log(names.splice(1,0,"LEO"));
+console.log(names);
+
+
+
+o/p
+['tharun', 'LEO', 'as', 'kani', 'sanjay']
+Here
+1->position
+0->number of elements
+
+
+let l=[1,2,3,4,"sri","eshwar"];
+console.log((l.join('')));
+
+
+
+o/p
+1234srieshwar
+
+
+let up="how are you";
+console.log(up.toUpperCase());
+
+o/p
+HOW ARE YOU
+
+
+let up="HI HOW ARE YOU";
+console.log(up.toLowerCase());
+
+o/p
+hi how are you
+
+
+let gun="js is intresting to learn";
+let su =gun.split(" ");
+for(var i=0;i<su.length;i++)
+{
+    su[i]=su[i].charAt(0).toUpperCase()+su[i].slice(1);
+}
+
+let app=su.join(" ");
+console.log(app);
+
+o/p
+Js Is Intresting To Learn
