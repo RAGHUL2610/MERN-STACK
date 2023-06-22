@@ -1,0 +1,490 @@
+
+// palindrome
+let str= "malayalam";
+let pal=str.split('');
+pal.reverse();
+let str1= pal.join('');
+if(str==str1)
+console.log("true");
+else
+console.log("false");
+
+let obj2=[1,2,3];
+for(let key of obj2)
+{
+    console.log(key)
+}
+
+o/p
+1
+2
+3
+
+
+let sece=["rag","kri","har"];
+
+
+sece.forEach((ele)=>
+{
+    console.log(ele);
+})
+
+o/p
+Rag
+Kri
+Har
+
+
+
+let sece=["rag","kri","har"];
+
+
+sece.forEach((ele)=>
+{
+    console.log(ele.repeat(2));
+})
+
+o/p
+ragrag
+ krikri
+ Harhar
+
+
+for each doen’t dispaly as  array
+Map display ans as  array
+
+
+let arr=[1,2,3]
+arr.forEach((ele)=>
+{
+    console.log(ele*ele);
+})
+
+
+
+o/p
+1
+4
+9
+
+let arr=[1,2,3]
+arr.forEach(ele=> console.log(ele*ele));
+
+
+
+o/p
+1
+4
+9
+
+let sece=["rag","kri","har"];
+sece.map(ele=> console.log(ele.repeat(3)));
+
+
+
+o/p
+
+ragragrag
+krikrikri
+ harharhar
+
+
+et arr4=sece.map(ele=>
+    {
+        return ele.repeat(2)
+    });
+    console.log(arr4);
+
+
+
+o/p
+['ragrag', 'krikri', 'harhar']
+
+let arr=[1,2,3,4,5,6,7,8,9];
+let arr5=arr.filter(ele=>
+    {
+        return ele%2;
+    })
+console.log(arr5);
+
+
+
+o/p
+[1, 3, 5, 7, 9]
+
+
+let arr5=arr.filter(ele=>
+    {
+        return !(ele%2);
+    })
+console.log(arr5);
+
+
+o/p
+[2, 4, 6, 8]
+
+
+
+let arr=[1,2,3,4,5,6,7,8,9];
+
+
+let ans=arr.filter(ele=>
+    {
+        return " ";
+
+
+    })
+    console.log(ans);
+
+o/p
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+
+
+
+
+
+
+let name=[
+        {
+            name:"kar",
+            dob:2002
+        },
+        {
+            name:"ram",
+            dob:2003
+        },
+        {
+            name:"rag",
+            dob:2004
+        },
+        {
+            name:"rav",
+            dob:2004
+        }
+       
+    ];
+
+
+    let namesabv2002= name.filter((ele)=>
+    {
+        return ele.dob>2002;
+    }).map((ele)=>
+    {
+        return ele.name
+    })
+
+
+    console.log(namesabv2002);
+
+
+
+o/p
+['ram', 'rag', 'rav']
+
+
+
+ let namesabv2002= name.map((ele)=>
+    {
+        if(ele.dob>=2003) return ele.name
+    })
+   
+
+
+    console.log(namesabv2002);
+
+
+
+o/p
+[undefined, 'ram', 'rag', 'rav']
+
+
+ let namesabv2002= name.filter((ele)=>
+    {
+        return ele.dob>2002;
+    }).map((ele)=>ele.name
+    )
+
+
+    console.log(namesabv2002);
+
+o/p
+['ram', 'rag', 'rav']
+
+
+
+//shadow copy
+
+
+    const a=[1,2,3];
+    a[3]=500;
+    console.log(a);
+
+o/p[1
+, 2, 3, 500]
+
+
+const a=[1,2,3];
+     const a1=a;
+    a[1]=200;
+    console.log(a);
+
+
+
+o/p
+[1, 200, 3]
+
+
+Deep copy
+const a=[1,2,3];
+     const a1={...a};
+    a[1]=200;
+    console.log(a1,a);
+
+
+
+o/p
+{0: 1, 1: 2, 2: 3} 
+ [1, 200, 3]
+
+
+let obj4={
+        nam:"sece",
+        year:"2023"
+
+
+    };
+    const obj1={...obj4};
+    console.log(obj4);
+
+
+o/p
+{nam: 'sece', year: '2023'}
+
+
+
+let obj4={
+        nam:"sece",
+        year:"2023",
+        nam:"dsa"
+
+
+    };
+    const obj1={...obj4};
+    console.log(obj4);
+
+
+
+
+o/p
+{nam: 'dsa', year: '2023'}
+
+
+
+let emp=[
+    {
+        name:"A",
+        age:20,
+        salary:2000
+    },
+    {
+        name:"b",
+        age:"21",
+        salary:26000
+
+
+    },
+    {
+        name:"c",
+        age:"25",
+        salary:29000
+    }
+];
+
+
+let sal=emp.filter((ele)=>
+{
+    return ele.salary>25000;
+}).map((ele)=>{
+     return {name:ele.name,age:ele.age};
+})
+
+
+console.log(sal);
+
+o/p
+{name: 'b', age: '21'}
+       {name: 'c', age: '25'}
+
+//array de-structuring
+let arr=[10,20,30,40,50];
+let [a1,a2,a3,a4,a5]=arr;
+
+
+console.log(a1,a2,a3,a4,a5);
+
+o/p 10 20 30 40 50
+let arr=[10,20,30,40,50,60,70];
+
+
+let [a1,a2,a3,a4,a5]=arr;
+
+
+console.log(a1,a2,a3,a4,a5);
+
+o/p
+10 20 30 40 50
+
+
+
+REST OPERATOR
+
+let arr=[10,20,30,40,50,60,70];
+
+
+let [a1,a2,a3,a4,...a5]=arr;
+
+
+console.log(a1,a2,a3,a4,a5);
+
+
+
+o/p
+10 20 30 40  [50, 60, 70]
+
+let arr=[10,20,30,40,50,60,70];
+
+
+let [a1,a2,,a3,a4]=arr;
+
+
+console.log(a1,a2,a3,a4,);
+
+O/P
+10 20 40 50
+
+let arr=[10,20,30,40,50,60,70,80,90,100];
+
+
+let [a1,a2,,a3,a4,...a5]=arr;
+
+
+console.log(a1,a2,a3,a4,a5);
+
+
+
+o/p
+10 20 40 50 (5) [60, 70, 80, 90, 100]
+
+
+let obj=
+{
+    name:"sece",
+    year:2024,
+    city:"cbe"
+};
+
+
+let { name,year,city}=obj;
+
+
+console.log(name,year,city);
+
+
+
+o/p
+sece 2024 cbe
+
+//object de structuring
+let obj=
+{
+    name:"sece",
+    year:2024,
+    city:"cbe",
+    time:"445",
+    rem:"dfd"
+};
+
+
+let { name,year,city,...rest}=obj;
+
+
+console.log(name,year,city,rest);
+
+
+o/p
+sece 2024 cbe {time: '445', rem: 'dfd'}
+
+let obj=
+{
+    names:"sece",
+    year:2024,
+    city:"cbe",
+    time:"445",
+    rem:"dfd"
+};
+
+
+let { names:surname,year,city,...rest}=obj;
+console.log(names,year,city,rest);
+
+o/p
+Uncaught ReferenceError: names is not defined
+    
+
+
+let obj=
+{
+    names:"sece",
+    year:2024,
+    city:"cbe",
+    time:"445",
+    rem:"dfd"
+};
+
+
+let { names:surname,year,city,...rest}=obj;
+
+
+console.log(surname,year,city,rest);
+
+
+o/p
+sece 2024 cbe {time: '445', rem: 'dfd'}
+
+function printContent() {
+    console.log("This is the content to be printed.");
+  }
+ 
+  setTimeout(printContent, 3000);
+ 
+
+
+o/p
+This is the content to be printed.
+
+Here we use settimeout builtin function to display the content after 3 seconds.
+
+
+
+
+ function printContent() {
+    console.log("This is the content to be printed.");
+  }
+ 
+  setInterval(printContent, 3000);
+
+o/p
+It displays the output in every 3 seconds
+
+
+
+
+//api call
+{
+    const promise_from_api = await fetch("https://jsonplaceholder.typicode.com/todos");
+    const data= await promise_from_api.json();
+    console.log(data);
+}
+apicall();
